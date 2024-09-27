@@ -135,9 +135,6 @@
   <ItemGroup>
     <ClCompile Include="proj1.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="mindal4_nonbg.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

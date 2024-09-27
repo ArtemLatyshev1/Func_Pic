@@ -44,7 +44,9 @@ int main(int argc, char** argv)
     {
         // file_in, file_out - путь к откуда взять начальный файл,
         // путь куда поместить итоговый файл соответственно
-        string file_in = "mindal4_nonbg.png";
+        string file_in;
+        cout << "Get path to file_in:" << endl;
+        cin >> file_in;
         string file_out = "mindal4_nonbg_ac.png";
 
         Mat Im = imread(file_in);
