@@ -40,18 +40,23 @@ Mat imlocalbrighten(Mat image)
 
 int main(int argc, char** argv)
 {
-    // file_in, file_out - путь к откуда взять начальный файл,
-    // путь куда поместить итоговый файл соответственно
-    string file_in = "C:/Users/Lenovo/Desktop/pic/mindal4_nonbg.png";
-    string file_out = "C:/Users/Lenovo/Desktop/pic/mindal4_nonbg_ac1.png";
+    try
+    {
+        // file_in, file_out - путь к откуда взять начальный файл,
+        // путь куда поместить итоговый файл соответственно
+        string file_in = "mindal4_nonbg.png";
+        string file_out = "mindal4_nonbg_ac.png";
 
-    Mat Im = imread(file_in);
+        Mat Im = imread(file_in);
 
-    Mat Ia = imlocalbrighten(Im);
-    imshow("In", Im);
-    imshow("Out", Ia);
-    imwrite(file_out, Ia);
-    waitKey();
-    return 0;
-
+        Mat Ia = imlocalbrighten(Im);
+        imshow("In", Im);
+        imshow("Out", Ia);
+        imwrite(file_out, Ia);
+        waitKey();
+        return 0;
+    }
+    catch (Exception ex){
+        cout << ex.msg;
+    }
 }
